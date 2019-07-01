@@ -8,7 +8,7 @@
   <?php while($this->next()): ?>
     <div id="article-<?php $this->cid();?>" class="article-item hoverup">
      <h2 id="article-<?php $this->cid();?>-title"><a href="<?php $this->permalink() ?>"><?php $this->title() ?></a></h2>
-      <p class="clear"><span id="article-author"><?php $this->author(); ?></span><span id="article-date"><?php $this->date('F j, Y'); ?></span></p>
+      <p class="clear"><span id="article-author"><?php $this->author(); ?></span><span id="article-date"><?php $this->date('Y/m/d'); ?></span></p>
     </div>
  <?php endwhile; ?>
    <div id="pages" class="clear">

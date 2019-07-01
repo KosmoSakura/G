@@ -5,6 +5,16 @@
  * @update: 2019-02-15
  */
 
+:root{
+	--widths: 850px;
+	--maincolors: linear-gradient(rgba(173,173,183,0.88), rgba(177,166,193,0.88), rgba(219,184,208,0.88));
+	--pagecolors: #000000;
+	--wmaincolors: #B1A6C1;
+	--unamecolors: #ADADB7;
+	--postcolors: rgba(73,73,103,0.35);
+	--commentcolors: #9999CC;
+	--linksimage: url('https://s2.ax1x.com/2019/06/04/VYUg3D.png');
+}
 
  /**
   * 基本样式
@@ -138,10 +148,10 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 
 #header {
 	border-radius: 30px;
-	background: #787878;
+	background: var(--maincolors);
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
 	padding: 1px;
-	width: 800px;
+	width: var(--widths);
 	margin: 50px auto;
 }
 #header-container {
@@ -203,7 +213,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 
 	#zp {
 	margin: 50px auto;
-	width: 800px;
+	width: var(--widths);
 	background: white;
 	border-radius: 30px;
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
@@ -238,7 +248,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 
 #article {
 	margin: 50px auto;
-	width: 800px;
+	width: var(--widths);
 }
 /* .article-item {
 	background: white;
@@ -259,13 +269,13 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	white-space: nowrap;
 }
 .article-item h2 span {
-	color: black;
+	color: var(--wmaincolors);
 	font-size: 2rem;
 	position:relative;
 	transition: .3s ease all;
 }
 .article-item p {
-	color: RGB(93,130,138);
+	color: var(--unamecolors);
 	line-height: 1.7;
 	margin: 0;
 	margin-top: 10px;
@@ -315,7 +325,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 
 #page {
 	margin: 50px auto;
-	width: 800px;
+	width: var(--widths);
 	background: white;
 	border-radius: 30px;
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
@@ -328,7 +338,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	font-size: 2.3rem;
 	font-weight: 400;
 	text-align: center;
-	color: RGB(182,177,150)!important;
+	color: var(--pagecolors)!important;
 }
 #page-content-title img {
 	height: 2.3rem;
@@ -336,7 +346,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	top: 0.2rem;
 }
 #page-content-article h1,#page-content-article h2,#page-content-article h3,#page-content-article h4 {
-	color: RGB(48,71,88);
+	color: var(--commentcolors);
 }
 #page-content-article h1::before,#page-content-article h2::before,#page-content-article h3::before,#page-content-article h4::before {
 	content: ' ';
@@ -403,7 +413,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 
 #post {
 	margin: 50px auto;
-	width: 800px;
+	width: var(--widths);
 	background: white;
 	border-radius: 30px;
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
@@ -431,7 +441,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	width: 100%;
 }
 #post-header-mask {
-	background: rgba(0,0,0,0.25);
+	background: var(--postcolors);
 	position: relative;
 	display: table;
 	vertical-align: middle;
@@ -461,7 +471,7 @@ html::-webkit-scrollbar-thumb,html *::-webkit-scrollbar-thumb {
 	padding: 1px;
 }
 #post-content-article h1,#post-content-article h2,#post-content-article h3,#post-content-article h4 {
-	color: RGB(48,71,88);
+	color: var(--commentcolors);
 	border-bottom: 1px solid #eaecef;
 	padding-bottom: .3em;
 }
@@ -607,7 +617,7 @@ ruby>rt {
  */
 
 #comments {
-	width: 800px;
+	width: var(--widths);
 	margin: 20px auto;
 }
 .page-navigator {
@@ -647,13 +657,13 @@ div#comments{
     margin-top: 40px;
 }
 #response{
-	color: RGB(48,71,88);
+	color: var(--commentcolors);
   border-bottom: 1px solid #eaecef;
   padding-bottom: .3em;
 	text-align: left;
 }
 #comments a,#comments a:link,#comments a:visited {
-    color: #07F;
+    color: var(--commentcolors);
     text-decoration: none;
     cursor: pointer;
     text-transform: capitalize;
@@ -771,7 +781,7 @@ button,html input[type=button],input[type=reset],input[type=submit] {
     border-color: #129fea
 }
 input#url,input#mail,input#author{
-	width: 32.8%;
+	width: 32%;
 }
 
 .submit{
@@ -785,7 +795,7 @@ input#url,input#mail,input#author{
 	color: white!important;
 	border: .0625rem solid rgba(250,250,250,0.7) !important;
 	box-shadow: rgba(0, 119, 225, 0.616) 0px 16px 60px -15px;
-	background: #07F;
+	background: var(--maincolors);
 	outline:none;
 	float: right;
 }
@@ -887,7 +897,7 @@ ol.comment-list .comment-child{
  */
 
 #links {
-	width: 800px;
+	width: var(--widths);
 	margin: 20px auto;
 	background: RGB(255,255,255);
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
@@ -898,7 +908,7 @@ ol.comment-list .comment-child{
 	text-align: center;
 	font-size: 2.3rem;
 	font-weight: 400;
-	color: RGB(182,177,150);
+	color: var(--pagecolors);
 	margin: 0;
 }
 #links h2::before {
@@ -910,7 +920,7 @@ ol.comment-list .comment-child{
 	top: 0.6rem;
 	left: -0.2rem;
 	background-size: contain;
-	background-image: url('../IMG/friends.svg');
+	background-image: var(--linksimage);
 }
 #links-content {
 	margin: 49px;
@@ -982,9 +992,9 @@ ol.comment-list .comment-child{
  */
 
 #footer {
-	width: 800px;
+	width: var(--widths);
 	margin: 20px auto;
-	background: RGB(113,114,122);
+	background:  var(--maincolors);
 	box-shadow: 0px 0px 70px 6px rgba(0,0,0,0.12);
 	padding: 1px;
 	border-radius: 30px;

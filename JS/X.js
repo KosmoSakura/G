@@ -24,11 +24,12 @@ var mobileHover = function () {
     });
 };
 
+
 //pjax 刷新
 $(document).pjax('a:not(a[target="_blank"], a[no-pjax])', {
-		container: '#pjax-container',
-		fragment: '#pjax-container',
-		timeout: 8000
+    container: '#pjax-container',
+    fragment: '#pjax-container',
+    timeout: 8000
 }).on('pjax:send',
 function() {
 		$("#M").addClass("opacity-disappear");
@@ -37,7 +38,6 @@ function() {
 	if (typeof Prism !== 'undefined') {
 		Prism.highlightAll(true,null);
 	}
-
 	$("#M").addClass("opacity-show");
 	$("#post img").each(function(){
 				$(this).wrap(function(){
@@ -61,7 +61,6 @@ function() {
 
 }
 );
-
 
 Smilies = {
     dom: function(id) {

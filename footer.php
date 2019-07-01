@@ -1,18 +1,24 @@
+
 </div>
 </div>
 <div id="footer">
 	<div id="footer-content" class="clear">
 		<div id="footer-content-left">
-			<p>©<?php $this->options->title(); ?> | <?php getBuildTime($this->options->builtTime); ?></p>
+			<p><?php $this->options->title(); ?> | <?php getBuildTime($this->options->builtTime); ?></p>
+        
 			<p><?php $this->options->beian(); ?></p>
+          <a class="jj" href="mailto:L@niconiconi.cc" target="_blank">©凉糕云提供计算服务</a>
+           并由 Typecho 强力驱动
+          
 		</div>
 		<div id="footer-content-right">
 			<p><?php if ($this->options->enableUpyun): ?>
        <a href="https://upyun.com" target="_blank"><img src="https://i.loli.net/2019/02/11/5c6187c809c8c.png"/></a>
       <?php endif; ?>
-			 <img src="https://i.loli.net/2019/02/11/5c6187e663b3a.png"/></p>
+			 <a href="https://niconiconi.cc/admin"><img src="https://s2.ax1x.com/2019/06/03/VYJ2ex.png"/></a></p>
 		</div>
 	</div>
+  
 
 	<script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://cdn.bootcss.com/jquery.pjax/2.0.1/jquery.pjax.min.js"></script>
@@ -132,8 +138,16 @@
 ajaxc();
 $(document).on('pjax:complete', function() {
 	ajaxc();
-})
-	</script>
+		})
+ </script>
+  <?php $this->footer(); ?>
 </div>
-<a id="gototop"><img src="https://i.loli.net/2019/02/11/5c617e353eb56.png"></a>
+<a id="gototop"><img src="https://s2.ax1x.com/2019/06/04/VYUn1g.png"></a>
 </body>
+
+<style type="text/css">
+      a.jj:link {color: white} /* 未访问的链接 */
+      a.jj:visited {color: white} /* 已访问的链接 */
+      a.jj:hover {color: white} /* 鼠标移动到链接上 */
+      a.jj:active {color: white} /* 选定的链接 */
+</style>

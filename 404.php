@@ -1,5 +1,23 @@
 <?php $this->need('header.php'); ?>
 
-	<h2 align="center" style="margin:200px auto;color:#787878;font-size:30px;">(´c_`)你似乎迷路辽</h2>
+<div id="zp">
+    <div id="zp-content">
+      <?php $this->content();?>
+      <body>
+    <p>
+      
+      <iframe src=https://niconiconi.cc/404.html id="tag" name="tag" allowTransparency="true" width=100% height=100% scrolling="no" frameborder="0">
+        </iframe>
+  
+  </p>
+</body>
+    </div>
+  </div>
+
+
+
+
+
+
 
 	<?php $this->need('footer.php'); ?>

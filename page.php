@@ -4,7 +4,7 @@
 
 		<div id="page">
 			<div id="page-content">
-				<h2 id="page-content-title"><img src="https://i.loli.net/2019/02/07/5c5c380db5e0b.png"><?php $this->title();?></h2>
+				<h2 id="page-content-title"><img src="https://s2.ax1x.com/2019/06/04/VYUlBn.png"><?php $this->title();?></h2>
 				<div id="page-content-article">
 					<?php $this->content();?>
 				</div>

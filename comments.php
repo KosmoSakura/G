@@ -88,7 +88,6 @@ if ($comments->levels > 0) {
 $comments->alt(' comment-odd', ' comment-even');
 echo $commentClass;
 ?>">
-
     <div id="<?php $comments->theId(); ?>">
         <div class="comment-inner">
             <div class="comment-author">
@@ -126,22 +125,23 @@ echo $commentClass;
                             <?php $comments->cancelReply(); ?>
                         </div>
                           <?php if($this->user->hasLogin()): ?>
-                              <h2 id="response" class="widget-title text-left"><?php _e('添加新评论'); ?></h2>
+                              <h2 id="response" class="widget-title text-left"><?php _e('🎯添加新评论'); ?></h2>
                           <?php else: ?>
-                            <h2 id="response" class="widget-title text-left"><?php _e('添加新评论'); ?></h2>
-                              <input type="text" name="author" id="author" placeholder="称呼" value="<?php $this->remember('author'); ?>" />
-                              <input type="email" name="mail" id="mail" placeholder="电子邮件" value="<?php $this->remember('mail'); ?>" />
-                              <input type="text" name="url" id="url" placeholder="网站"  value="<?php $this->remember('url'); ?>" />
+                            <h2 id="response" class="widget-title text-left"><?php _e('🎯添加新评论'); ?></h2>
+                              <input type="text" name="author" id="author" placeholder="尊姓大名" value="<?php $this->remember('author'); ?>" />
+                              <input type="email" name="mail" id="mail" placeholder="电子邮箱" value="<?php $this->remember('mail'); ?>" />
+                              <input type="text" name="url" id="url" placeholder="个人网站"  value="<?php $this->remember('url'); ?>" />
+                             
                           <?php endif; ?>
                           <p>
                               <input name="_" type="hidden" id="comment_" value="<?php echo Helper::security()->getToken(str_replace(array('?_pjax=%23pjax-container', '&_pjax=%23pjax-container'), '', Typecho_Request::getInstance()->getRequestUrl()));?>"/>
-                              <textarea rows="5" name="text" id="textarea" placeholder="在这里输入你的评论..." style="resize:none;"><?php $this->remember('text'); ?></textarea>
+                              <textarea rows="5" name="text" id="textarea" placeholder="请开始你的表演..." style="resize:none;"><?php $this->remember('text'); ?></textarea>
                           </p>
                           <div class="clear">
                             <div class="OwO-logo" onclick="OwO_show()">
                               <span>(OwO)</span>
                             </div>
-                            <button type="submit" class="submit"><?php _e('发射'); ?></button>
+                            <button type="submit" class="submit"><?php _e('🚀发射'); ?></button>
                           </div>
                           <div id="OwO-container"><?php  $this->need('owo.php'); ?></div>
                       </form>

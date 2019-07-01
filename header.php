@@ -6,6 +6,7 @@
 	<link rel="dns-prefetch" href="//cdn.bootcss.com">
 	<link rel="dns-prefetch" href="//i.loli.net">
 
+
 	<title><?php $this->archiveTitle(' &raquo; ', '', ' | '); ?><?php $this->options->title(); ?></title>
 
 	<link rel="stylesheet" href="<?php $this->options->themeUrl('CSS/G.css'); ?>" rel="stylesheet" />
@@ -77,7 +78,6 @@
 			}
 
 		}
-
 
 		<?php endif; ?>
 		html{
@@ -153,14 +153,19 @@
 			<div id="header-container">
 				<h2><?php $this->options->title(); ?></h2>
 				<div class="clear">
-					<span><?php $this->options->description() ?></span>
+					<span><?php $this->options->description() ?>
+                     <?php if ($this->is('index')) : ?>小炒锅<?php endif; ?>
+                     <?php if ($this->is('archive') or $this->is('post')) : ?>点菜单<?php endif; ?>
+                     <?php if ($this->is('page','links')) : ?>猫罐头<?php endif; ?>
+                     <?php if ($this->is('page','about')) : ?>一尾鱼<?php endif; ?>
+                  </span>
 					<nav>
-						<a href="<?php Helper::options()->siteUrl()?>" <?php if ($this->is('index')) : ?> class="nav-focus"<?php endif; ?>>首页</a>
+						<a href="<?php Helper::options()->siteUrl()?>" <?php if ($this->is('index')) : ?> class="nav-focus"<?php endif; ?>>小炒锅</a>
 						<?php if ($this->options->enableIndexPage): ?>
-								<a href="<?php Helper::options()->siteUrl()?>blog" <?php if ($this->is('archive') or $this->is('post')) : ?> class="nav-focus"<?php endif; ?>>文章</a>
+								<a href="<?php Helper::options()->siteUrl()?>blog" <?php if ($this->is('archive') or $this->is('post')) : ?> class="nav-focus"<?php endif; ?>>点菜单</a>
       			<?php endif; ?>
-						<a href="<?php Helper::options()->siteUrl()?>links.html" <?php if ($this->is('page','links')) : ?> class="nav-focus"<?php endif; ?>>友人帐</a>
-						<a href="<?php Helper::options()->siteUrl()?>about.html" <?php if ($this->is('page','About')) : ?> class="nav-focus"<?php endif; ?>>关于</a>
+						<a href="<?php Helper::options()->siteUrl()?>links.html" <?php if ($this->is('page','links')) : ?> class="nav-focus"<?php endif; ?>>猫罐头</a>
+						<a href="<?php Helper::options()->siteUrl()?>about.html" <?php if ($this->is('page','about')) : ?> class="nav-focus"<?php endif; ?>>一尾鱼</a>
 					</nav>
 				</div>
 			</div>
